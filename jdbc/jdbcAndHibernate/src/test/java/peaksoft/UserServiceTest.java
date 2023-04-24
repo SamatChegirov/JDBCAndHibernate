@@ -16,15 +16,7 @@ public class UserServiceTest {
     private final String testLastName = "Subanov";
     private final byte testAge = 23;
 
-    @Test
-    public void dropUsersTable() {
-        try {
-            userService.dropUsersTable();
-            userService.dropUsersTable();
-        } catch (Exception e) {
-            Assert.fail("При тестировании удаления таблицы произошло исключение\n" + e);
-        }
-    }
+
 
     @Test
     public void createUsersTable() {
@@ -33,6 +25,16 @@ public class UserServiceTest {
             userService.createUsersTable();
         } catch (Exception e) {
             Assert.fail("При тестировании создания таблицы пользователей произошло исключение\n" + e.getMessage());
+        }
+    }
+
+    @Test
+    public void dropUsersTable() {
+        try {
+            userService.dropUsersTable();
+            userService.dropUsersTable();
+        } catch (Exception e) {
+            Assert.fail("При тестировании удаления таблицы произошло исключение\n" + e);
         }
     }
 

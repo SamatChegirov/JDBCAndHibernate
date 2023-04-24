@@ -25,6 +25,9 @@ public class User {
         this.age = age;
     }
 
+    public User(Long id, String name, String lastName, Byte age) {
+    }
+
     public Long getId() {
         return id;
     }
